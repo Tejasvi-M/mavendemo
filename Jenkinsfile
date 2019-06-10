@@ -8,7 +8,9 @@ args '-v "$HOME/.m2":/root/.m2'
 stages{
  stage('maven-build'){
  steps{
- sh 'mvn -B -DskipTests clean package'
+ sh '''mvn -B -DskipTests clean package
+ mvn package
+ '''
 }
 }
 }
