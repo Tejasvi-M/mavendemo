@@ -10,7 +10,7 @@ stages{
  steps{
  sh '''mvn -B -DskipTests clean package
  mvn package
- cd /var/lib
+ cd /home
  ls -a
  '''
  sh 'curl http://localhost:8085/github-maven-example-0.1-SNAPSHOT-sources.jar'
